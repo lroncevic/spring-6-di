@@ -1,6 +1,5 @@
-package com.lukaroncevic.spring6di.controllers;
+package com.lukaroncevic.spring6di.controllers.i18n;
 
-import com.lukaroncevic.spring6di.services.GreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,14 +8,15 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ActiveProfiles("ES")
 @SpringBootTest
-class ConstructorInjectedControllerTest {
+class Myi18NControllerTestEN {
 
     @Autowired
-    ConstructorInjectedController controller;
+    Myi18NController myi18NController;
 
     @Test
     void sayHello() {
-        System.out.println(controller.sayHello());
+        System.out.println(myi18NController.sayHello());
     }
 }
